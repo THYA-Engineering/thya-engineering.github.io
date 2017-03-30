@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>THYA Gaming - Minecraft</title>
+    <meta http-equiv="content-type" content="text/html" />
+    <meta charset="utf-8">
+    <meta name="description" content="The home of THYA Engineering - Gaming division, on the web!">
+    <meta name="keyworlds" content="">
+
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="screen">
+    <script src="https://mcapi.us/scripts/minecraft.js"></script>
+    <script>
+        MinecraftAPI.getServerStatus('thya-engineering.network',
+            function(err, status) {
+            if (err) {
+                return document.querySelector('.right-box').innerHTML="Status Unavailable at this time";
+            }
+            document.querySelector('.server-online').innerHTML = status.online ? "It's Up!" : "It's Down :(";
+            document.querySelector('.server-players-current').innerHTML = status.players.now.toString();
+            document.querySelector('.server-version').innerHTML = status.server.name.toString().replace("Spigot ", "");
+        });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="http://thya-engineering.network">THYA</a>
+        <a href="team.html">Team</a>
+      </div>
+      <div class="right">
+        <div class="right-box">
+          <h2>Minecraft</h2>
+          <p class="text-center">
+          Address: <b>mc.thya-engineering.network</b><br>
+          Owner: <b>Perdurable </b><br>
+          Online: <b><span class="server-online"></span></b><br>
+          Currently Online: <b><span class="server-players-current"></span></b><br>
+          Version: <b><span class="server-version"></b></span>
+          </p>
+          <h2>Minecraft PE</h2>
+          <p class="text-center">
+          Address: <b>mcpe.thya-engineering.network</b><br>
+          Owner: <b> Perdurable</b><br>
+          Online: <b>It's Up!</b><br>
+          Currently Online: <b> 0/15</b><br>
+          Version: <b> 1.03</b>
+        </div>
+      </div>
+      <div class="post">
+          <h2>THYA Gaming Slack Launched!<h2>
+          <h5>03/29/2017</h5>
+          <p>
+            One more announcement for today! Today we're launching the official THYA Slack channel! You can join up <a href=#>here</a>. Please join us to help report bugs, or just to chat with other community members! We're always around to help answer your questions and to help solve any issues with our gaming servers. Good luck and have fun!
+          </p>
+      </div>
+      <div class="post">
+          <h2>MCPE Server Launched!</h2>
+          <h5>03/29/2017</h5>
+          <p>
+            Today we're also launching our brand new MCPE Server. This one still has a few bugs, but feel free to join and start playing around with it. You can use your mobile device or MC Windows 10 Edition, either should work. There are some bugs with the Windows 10 client that Mojang is currently working on that are out of our control. For now the best experience will be from your mobile device. Have fun, and please do not hesitate to let us know of issues, and we'll be sure to check them out. Happy mining!
+          </p>
+      </div>
+      <div class="post">
+        <h2>New Website!</h2>
+        <h5>03/29/2017</h5>
+        <p>
+          And we're launched! Today marks the first day of THYA's Minecraft Server website being launched. More to come, but for now, browse around, more content is coming and suggestions are welcome. Please feel free to drop us an email at thya-engineering@gmail.com. Thank you!
+        </p>
+      </div>
+   </div>
+    <div class="footer">
+      <p>Created by <a href="http://hacdan.org">HacDan</a></p>
+    </div>
+
+  </body>
+</html>
